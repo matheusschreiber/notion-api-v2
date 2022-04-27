@@ -1,0 +1,32 @@
+.task_item_wrapper {
+  background-color: var(--white);
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  transition: .2s;
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.task_item_wrapper:hover {
+  transform: scale(1.1);
+}
+
+.task_item_wrapper h1{
+  font-size: 15pt;
+  color: var(--main_tone);
+  margin-top: 5px;
+}
+
+.task_item_wrapper h2 {
+  font-size: 12pt;
+  color: var(--second_tone);
+}
+
+.task_item_wrapper {
+  font-size: 12pt;
+}
+
+.task_item_wrapper ul {
+  list-style: none;
+}

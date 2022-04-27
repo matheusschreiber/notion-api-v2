@@ -1,0 +1,42 @@
+.calendar_item_wrapper h4 {
+  font-size: 12pt;
+  font-weight: 400;
+}
+
+.calendar_item_wrapper {
+  font-size: 8pt;
+  width: fit-content;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.date_time_event {
+  min-height: 30px;
+  width: 110px;
+  border-radius: 8px;
+  line-height: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 5px;
+}
+
+@media(max-width:500px){
+  .calendar_item_wrapper{
+    flex-direction: column;
+  }
+  #event {
+    margin-bottom: 10px;
+  }
+}
+
+#date {
+  color: var(--main_tone);
+  font-weight: bold;
+  font-size: 14pt;
+}
+
+#event{
+  width: fit-content;
+  justify-content: left;
+}
