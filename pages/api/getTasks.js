@@ -43,6 +43,7 @@ export default async function handler(req, res) {
   })
 
   const data = pages.results  
+  console.log(data)
   let output = []
   
   await Promise.all(data.map(async(i)=>{
@@ -58,10 +59,10 @@ export default async function handler(req, res) {
 
     const blocks = await notion.blocks.children.list({
       block_id: i.id,
-    });
+    });  
 
     blocks.results.map((j)=>{
-      if (j.to_do) page.subtasks.push(j.to_do.rich_text[0].text.content)
+      if (j.to_do && j.to_do.rich_text[0]) page.subtasks.push(j.to_do.rich_text[0].text.content)
       else page.subtasks.push([])
     })
 
